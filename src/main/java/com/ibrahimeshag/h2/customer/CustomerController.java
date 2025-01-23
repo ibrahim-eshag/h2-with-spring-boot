@@ -2,6 +2,7 @@ package com.ibrahimeshag.h2.customer;
 
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -11,9 +12,18 @@ public class CustomerController {
 
     private  final CustomerService customerService;
 
+    /**
+     * Retrieves a paginated and sorted list of customers.
+     * Example usage:
+     * GET http://localhost:8080/api/v1/customers?page=1&size=10&sort=name,asc
+     *
+     * @param pageable contains pagination and sorting information provided by Spring Data.
+     * @return a paginated collection of customers.
+     */
+
     @GetMapping
-    public Customer[] getAllCustomers() {
-        return customerService.getAllCustomers();
+    public Customer[] getAllCustomers(Pageable pageable) {
+        return customerService.getAllCustomers(pageable);
     }
 
     @GetMapping("/{id}")
