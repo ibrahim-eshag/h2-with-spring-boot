@@ -9,3 +9,4 @@
 * Populating primary data in the database; by inserting data.sql file content.
 * Exploring more about queries options (Sorting, pagination). 
 * Scheduling (Running code based on time configuration).
+* Adding logback-spring.xml configuration file for logging, and customize it based on the appender type.
