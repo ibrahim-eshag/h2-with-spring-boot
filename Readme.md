@@ -10,3 +10,4 @@
 * Exploring more about queries options (Sorting, pagination). 
 * Scheduling (Running code based on time configuration).
 * Adding logback-spring.xml configuration file for logging, and customize it based on the appender type.
+* Started adding Unit testing.
